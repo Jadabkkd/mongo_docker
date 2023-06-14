@@ -1,0 +1,18 @@
+version: '3.7' # or '2.4'      # add
+services:                      # add
+  app:
+    build: .
+    command: python -u app.py  # (delete? duplicates Dockerfile CMD)
+    ports:
+      - "8080:8080"
+    volumes:                   # (delete? duplicates Dockerfile COPY)
+      - .:/app
+  mongodb:
+    image: mongo:latest
+    environment:
+      - MONGODB_HOSTNAME = mongodb
+      - MONGO_INITDB_DATABASE=GOF-DB-new
+    ports:
+      - 27017:27017
+# volumes:                     # add?
+#    dbdata:                   # add?

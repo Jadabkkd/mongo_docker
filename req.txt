@@ -1,0 +1,14 @@
+blinker
+cachelib
+click
+colorama
+dnspython
+Flask
+Flask-Session
+itsdangerous
+Jinja2
+MarkupSafe
+passlib
+pymongo
+pytz
+Werkzeug
